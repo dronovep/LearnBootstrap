@@ -1,18 +1,10 @@
 var gulp = require("gulp");
-
+var Default = require("./gulpfiles/default.js")
+var Make = require("./gulpfiles/make.js")
 
 // команда gulp
-exports.default = (gulp_callback) => {
-    console.log('running hello task');
-    console.log('hello task is over');
-    gulp_callback();
-};
+exports.default = Default.task;
 
 
 // команда gulp make
-exports.make = (gulp_callback) => {
-    console.log('running make task');
-    console.log('make task is over');
-    gulp_callback();
-};
-
+exports.make = Make.task;
