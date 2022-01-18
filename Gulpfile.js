@@ -1,6 +1,6 @@
 const {series, src, parallel, dest} = require("gulp");
-var Default = require("./gulpfiles/default.js")
-var Make = require("./gulpfiles/make.js")
+const Default = require("./gulpfiles/default.js")
+const Make = require("./gulpfiles/make.js")
 
 // команда gulp
 exports.default = Default.task;

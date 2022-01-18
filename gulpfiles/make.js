@@ -1,12 +1,9 @@
 'use strict';
 
-const {pipe, dest} = require("gulp");
+const {parallel, series} = require("gulp");
+const clean = require("./clean");
+const typescript = require("./typescript");
+const sass = require("./sass");
 
-var ts = require("gulp-typescript");
-var tsProject = ts.createProject("tsconfig.json");
 
-function make() {
-    return tsProject.src().pipe(tsProject()).js.pipe(dest("dist"));
-}
-
-exports.task = make;
+exports.task = series(clean.task, parallel(typescript.task, sass.task))
