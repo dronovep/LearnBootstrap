@@ -1,0 +1,10 @@
+@import 'vars';
+
+* {
+  box-sizing: border-box;
+}
+
+.mblock {
+  color: $mmed-blue-color;
+  background-color: $mlight-blue-color;
+}
