@@ -1,0 +1,5 @@
+//Пример определения простейшей примеси (mixin)
+@mixin full-width-flex {
+  width: 100%;
+  display: flex;
+}

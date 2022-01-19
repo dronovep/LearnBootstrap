@@ -1,0 +1,6 @@
+@import '../base/mixins';
+
+//Пример использования простейшей примеси (mixin)
+.mbar {
+  @include full-width-flex;
+}
