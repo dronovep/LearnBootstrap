@@ -6,4 +6,4 @@ const typescript = require("./typescript");
 const sass = require("./sass");
 
 
-exports.task = series(clean.task, parallel(typescript.task, sass.task))
+exports.task = series(parallel(typescript.task, sass.task))
