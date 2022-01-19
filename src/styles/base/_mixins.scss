@@ -4,8 +4,8 @@
   display: flex;
 }
 
-//Пример определения примеси с аргументами
-@mixin edge-decorator($padding-size, $border-radius) {
+//Пример определения примеси с аргументами, для аргумента border-style указано значение по умолчанию
+@mixin edge-decorator($padding-size, $border-radius, $border-params: solid 2px) {
   // Сложная подстановка переменной
   // чтобы эта подстановка работала в склейке с другим куском, надо использовать скобки
   // в противном случае sass пытался бы использовать переменную $border-radiusem - которой нет
@@ -13,4 +13,5 @@
 
   //простая подстановка переменной
   border-radius: $border-radius;
+  border: $border-params;
 }
