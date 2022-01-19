@@ -4,3 +4,9 @@
 .mbar {
   @include full-width-flex;
 }
+
+//Пример использования и простейшей примеси и примеси с аргументами
+.mbar2 {
+  @include full-width-flex;
+  @include edge-decorator(0.5, 3px);
+}
