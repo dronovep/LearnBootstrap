@@ -21,3 +21,11 @@
   //если хотим навязать свой порядок аргументов, нужно их передавать явно указывая имена
   @include edge-decorator($border-radius: 8px, $padding-size: 2,  $border-params: solid 7px);
 }
+
+//Применение еще одного вида примеси, я назвал ее блочной.
+.mbar5 {
+  @include block-mixin {
+    color: black;
+    font-size: 1em;
+  }
+}
