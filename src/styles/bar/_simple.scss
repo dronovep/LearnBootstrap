@@ -29,3 +29,13 @@
     font-size: 1em;
   }
 }
+
+.mmbar {
+  width:95%;
+  @include one-mscreen {
+    width: 100%;
+  }
+  @include two-mscreen {
+    width: 50%;
+  }
+}
