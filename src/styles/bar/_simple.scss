@@ -1,30 +1,30 @@
-@import '../base/mixins';
+@use '../base/mixins' as mx;
 
 //Пример использования простейшей примеси (mixin)
 .mbar {
-  @include full-width-flex;
+  @include mx.full-width-flex;
 }
 
 //Пример использования и простейшей примеси и примеси с аргументами
 .mbar2 {
-  @include full-width-flex;
-  @include edge-decorator(0.5, 3px);  // здесь будет выставлен border-style по умолчанию
+  @include mx.full-width-flex;
+  @include mx.edge-decorator(0.5, 3px);  // здесь будет выставлен border-style по умолчанию
 }
 
 .mbar3 {
-  @include full-width-flex;
-  @include edge-decorator(1, 6px, solid 5px);
+  @include mx.full-width-flex;
+  @include mx.edge-decorator(1, 6px, solid 5px);
 }
 
 .mbar4 {
-  @include full-width-flex;
+  @include mx.full-width-flex;
   //если хотим навязать свой порядок аргументов, нужно их передавать явно указывая имена
-  @include edge-decorator($border-radius: 8px, $padding-size: 2,  $border-params: solid 7px);
+  @include mx.edge-decorator($border-radius: 8px, $padding-size: 2,  $border-params: solid 7px);
 }
 
 //Применение еще одного вида примеси, я назвал ее блочной.
 .mbar5 {
-  @include block-mixin {
+  @include mx.block-mixin {
     color: black;
     font-size: 1em;
   }
@@ -32,10 +32,14 @@
 
 .mmbar {
   width:95%;
-  @include one-mscreen {
+  @include mx.one-mscreen {
     width: 100%;
   }
-  @include two-mscreen {
-    width: 50%;
+  @include mx.two-mscreen {
+    width: 45%;
   }
+}
+
+.bl {
+  background-color: lightblue;
 }
