@@ -1,9 +1,13 @@
 @use 'mixins' as mx;
 
 h2 {
-  @include mx.brad(3px, 3px, 15px, 3px);
+  @include mx.brad(23px, 23px, 23px, 23);
 }
 
 .vaka {
   text-align: center;
+}
+
+.karamba {
+  padding: 0;
 }
