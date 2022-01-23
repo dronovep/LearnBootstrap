@@ -1,6 +1,7 @@
 'use strict';
 
-const {parallel, series, watch} = require("gulp");
+const {series} = require("gulp");
+const {watch} = require("gulp-watch");
 const sass = require("./sass");
 
 

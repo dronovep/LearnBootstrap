@@ -1,0 +1,9 @@
+@use 'mixins' as mx;
+
+h2 {
+  @include mx.brad(3px, 3px, 15px, 3px);
+}
+
+.vaka {
+  text-align: center;
+}
