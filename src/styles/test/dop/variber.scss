@@ -1,6 +1,0 @@
-@use '../mixins' as mx;
-
-.variber {
-  @include mx.brad(33px, 33px, 122px, 80px);
-  display:inline-block;
-}

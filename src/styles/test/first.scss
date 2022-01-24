@@ -1,5 +1,0 @@
-@use 'mixins' as mx;
-
-h1 {
-  @include mx.brad(11px, 11px, 21px, 11px);
-}

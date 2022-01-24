@@ -1,7 +1,0 @@
-@use '../mixins' as mmx;
-
-.braga {
-  @include mmx.brad(3px, 3px, 3px, 3px);
-  display: block;
-  background-color: #0c4128;
-}
