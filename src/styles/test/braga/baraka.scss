@@ -1,0 +1,6 @@
+@use '../mixins' as mx;
+
+.brka {
+  @include mx.brad(1px, 1px, 1px, 1px);
+  float: left;
+}

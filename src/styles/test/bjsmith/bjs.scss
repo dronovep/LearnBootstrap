@@ -1,0 +1,8 @@
+@use '../mixins' as mmix;
+
+.bjs {
+  align-content: center;
+  justify-content: center;
+  display: flex;
+  @include mmix.brad(12px, 12px, 12px, 12px);
+}

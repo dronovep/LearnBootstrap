@@ -1,7 +1,7 @@
 @use '../../mixins' as mxn;
 
 .prokol {
-  @include mxn.brad(10px, 12px, 2px, 44px);
+  @include mxn.brad(10px, 12px, 2px, 144px);
   color: black;
   display:flex;
 }
