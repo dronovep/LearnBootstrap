@@ -27,6 +27,10 @@ function packTest() {
 }
 
 exports.task = function() {
-    watch('./src/styles/test/**/*.scss', {ignoreInitial: false}, series(parallel(testSass, includeLibs), packTest));
+    watch(
+        ['./src/styles/test/**/*.scss', './node_modules/bootstrap/dist/css/bootstrap.css'],
+        {ignoreInitial: false},
+        series(parallel(testSass, includeLibs), packTest)
+    );
 }
 
