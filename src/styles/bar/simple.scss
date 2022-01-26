@@ -67,4 +67,9 @@
   &:hover {
     background-color: #0a53be;
   }
+
+  // это бдет преобразовано в селектор h3 .stil1
+  h3 & {
+    background-color: #1a1e21;
+  }
 }
