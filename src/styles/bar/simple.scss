@@ -72,4 +72,36 @@
   h3 & {
     background-color: #1a1e21;
   }
+
+  // это будет преобразовано в селектор .stil1__open
+  &__open {
+    text-align: justify-all;
+  }
+
+  // это будет преобразовано в селектор .stil1variber
+  &variber {
+    display: inline-block;
+  }
+
+  // так делать нельзя, & разрешен только в начале
+  //variber& {
+  //  display: block;
+  //}
 }
+
+// это даст такие стили body{margin:0;padding:0}body-container{width:100%;height:100%}body-container-half{width:50%;height:50%}
+body {
+  margin: 0;
+  padding: 0;
+
+  &-container {
+    width: 100%;
+    height: 100%;
+    &-half {
+      width: 50%;
+      height: 50%;
+    }
+  }
+}
+
+// по сути просто вместо & подставляется ближайший внешний селектор к текущему, но разрешено его использовать только так &sometext, а не sometext&
