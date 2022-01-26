@@ -40,11 +40,31 @@
   }
 }
 
-.bl {
-  background-color: lightblue;
-  padding: 13px;
-}
+.stil1 {
+  background-color: #0d6efd;
 
-.vaka {
-  text-align: center;
+  // это будет преобразовано в селектор .stil1 h1
+  h1 {
+    height: 25px;
+
+    // это будет преобразовано в селектор .stil1 h1 h2
+    h2 {
+      height: 20px;
+
+      // это будет преобразовано в селектор .stil1 h1 h2:hover
+      &:hover {
+        background-color: #6c757d;
+      }
+
+      // так делать нельзя
+      //&&:hover {
+      //  color:#0c4128;
+      //}
+    }
+  }
+
+  // это будет преобразовано в селектор .stil1:hover
+  &:hover {
+    background-color: #0a53be;
+  }
 }
