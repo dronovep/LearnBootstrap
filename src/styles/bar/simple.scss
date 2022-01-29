@@ -31,12 +31,12 @@
 }
 
 .mmbar {
-  width:95%;
+  width:35%;
   @include mx.one-mscreen {
-    width: 100%;
+    width: 90%;
   }
   @include mx.two-mscreen {
-    width: 55%;
+    width: 75%;
   }
 }
 
@@ -46,5 +46,5 @@
 }
 
 .vaka {
-  text-align: center;
+  text-align: justify-all;
 }

@@ -1,0 +1,7 @@
+@use '../base/mixins'as mxn;
+
+.mhard {
+  color:#1a1e21;
+  background-color: #0f3e8a;
+  @include mxn.edge-decorator(10px, 3px, solid 122px)
+}
