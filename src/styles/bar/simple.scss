@@ -31,77 +31,20 @@
 }
 
 .mmbar {
-  width:95%;
+  width:35%;
   @include mx.one-mscreen {
-    width: 100%;
+    width: 90%;
   }
   @include mx.two-mscreen {
-    width: 55%;
+    width: 75%;
   }
 }
 
-.stil1 {
-  background-color: #0d6efd;
-
-  // это будет преобразовано в селектор .stil1 h1
-  h1 {
-    height: 25px;
-
-    // это будет преобразовано в селектор .stil1 h1 h2
-    h2 {
-      height: 20px;
-
-      // это будет преобразовано в селектор .stil1 h1 h2:hover
-      &:hover {
-        background-color: #6c757d;
-      }
-
-      // так делать нельзя
-      //&&:hover {
-      //  color:#0c4128;
-      //}
-    }
-  }
-
-  // это будет преобразовано в селектор .stil1:hover
-  &:hover {
-    background-color: #0a53be;
-  }
-
-  // это бдет преобразовано в селектор h3 .stil1
-  h3 & {
-    background-color: #1a1e21;
-  }
-
-  // это будет преобразовано в селектор .stil1__open
-  &__open {
-    text-align: justify-all;
-  }
-
-  // это будет преобразовано в селектор .stil1variber
-  &variber {
-    display: inline-block;
-  }
-
-  // так делать нельзя, & разрешен только в начале
-  //variber& {
-  //  display: block;
-  //}
+.bl {
+  background-color: lightblue;
+  padding: 13px;
 }
 
-// это даст такие стили body{margin:0;padding:0}body-container{width:100%;height:100%}body-container-half{width:50%;height:50%}
-body {
-  margin: 0;
-  padding: 0;
-
-  &-container {
-    width: 100%;
-    height: 100%;
-    &-half {
-      width: 50%;
-      height: 50%;
-    }
-  }
+.vaka {
+  text-align: justify-all;
 }
-
-// по сути просто вместо & подставляется ближайший внешний селектор к текущему, но разрешено его использовать только так &sometext, а не sometext&
