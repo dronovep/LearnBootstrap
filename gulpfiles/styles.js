@@ -4,10 +4,13 @@ const sass = require('gulp-dart-sass');
 const cssnano = require('gulp-cssnano');
 const concat = require('gulp-concat');
 const sourcemaps = require('gulp-sourcemaps');
+const postcss = require('gulp-postcss');
+const autoprefixer = require('autoprefixer');
 
 function processSass() {
     return src(['./src/styles/**/*.scss', './node_modules/bootstrap/dist/css/bootstrap.css'], {since: lastRun(processSass)})
         .pipe(sass().on('error', sass.logError))
+        .pipe(postcss([autoprefixer({ overrideBrowserslist: ['>0.1%'] })]))
         .pipe(dest('./obj/css/'));
 }
 
