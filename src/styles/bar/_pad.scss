@@ -1,0 +1,85 @@
+@use '../base/vars';
+
+//@use '../base/vars' with ($mlight: grey, $mdark: blue);
+//с помощью with мы переопределяем значения конфигурируемых переменных
+// (объявленных в исходном модуле через default)
+
+
+//@use '../base/vars' as vr with ($mlight: grey, $mdark: blue);
+// Но эта штука имеет неприятное ограничение  - если на пути к точке входа модульподгружается более одного раза
+// даже через use - то в этом случае использовать конфигурирование не получится
+// Гораздо надежней имитировать конфигурирование с помощью миксина, аргументы которого бы переопределили
+// загруженные из другого модуля переменные
+
+
+
+
+// Пример интерполяции - с помощью #{} можно использовать значения переменных в кусках кода
+// не предназначенных изначально под значения переменных
+.mpad {
+  @each $size in vars.$padsides {
+    padding-#{$size} : 10px;
+  }
+
+  text-align: center;
+
+  background-color: navajowhite;
+  border-radius: 4px;
+  &:hover {
+    background-color: #6c757d;
+  }
+}
+
+$first_size: 15px;
+
+.varik {
+  background-color: #6c757d;
+  // локальная переменная внутри блока стиля (но не внутри управляющей конструкции! типа if)
+  // затеняет глобальную. Также обращаем внимание, что символы _ и - равнозначны в SASS
+  $first-size:20px;
+  // здесь будет 20px
+  margin-left: $first-size;
+  margin-right: $first_size;
+}
+
+.karig {
+  background-color: #1a1e21;
+  // А здесь уже будет использована глобальная переменная и как итог 15px
+  margin-right: $first_size;
+}
+
+.revarik {
+  background-color: #0a53be;
+  // с помощью !global мы не создаем новую локальную переменную, а задаем новое значение глобальной
+  $first_size: 125px !global;
+  margin-right: $first_size;
+}
+
+.bgerf {
+  // $first-size все еще содержит 125px
+  margin: $first_size;
+}
+
+.jyrt {
+  color: vars.$mdark-blue-color;
+}
+
+// Покажем как будут вести себя переменные внутри управляющих сруктур
+$mflag: true;
+$mvar: 5%;
+
+.mcondit {
+  @if $mflag {
+    $mvar: 35%;
+    // width будет 35%
+    width: $mvar;
+  }
+
+  // height будет 5%
+  height: $mvar;
+}
+
+.mcnd {
+  // и здесь тоже 5%
+  width: $mvar;
+}

@@ -1,3 +1,7 @@
+// пример с default - это конфигурируемые переменные, которые можно переопределять при загрузке в другой модуль
+$mlight: white !default;
+$mdark: black !default;
+
 $mdark-blue-color: black;
 $mmed-blue-color: #0f3e8a;
 $mlight-blue-color: #4686ec;
@@ -13,3 +17,4 @@ $padsides: (
   bottom,
   left
 );
+
