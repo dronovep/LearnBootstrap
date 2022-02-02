@@ -100,3 +100,15 @@ $mselector: string.unquote("h1 > h2");
   height: 100%;
   min-height: 55px;
 }
+
+//примеры декларации списков
+$mcolorlist: (white, black, red, green, blue);
+$mcolorlist: pink yellow darkgreen grey;
+$mcolorlist: [red, green, blue];
+$mcolorlist: brown, pink, grey, magenta;
+//Ест еще вариант определить список через slash (/) типа 10px/20px, но с цветами это не прокатит, имеет ограничения
+//Ник чему короче говоря
+@each $color in $mcolorlist {
+  @debug $color;
+}
+
