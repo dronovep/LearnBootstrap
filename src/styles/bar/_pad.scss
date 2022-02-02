@@ -1,4 +1,5 @@
 @use '../base/vars';
+@use 'sass:string';
 
 //@use '../base/vars' with ($mlight: grey, $mdark: blue);
 //с помощью with мы переопределяем значения конфигурируемых переменных
@@ -82,4 +83,20 @@ $mvar: 5%;
 .mcnd {
   // и здесь тоже 5%
   width: $mvar;
+}
+
+$mselector: string.unquote("h1 > h2");
+
+//сделать селектор так не получится, даже если он представляет собой строку без кавычек
+//$mselector {
+//  box-sizing: content-box;
+//  height: 100%;
+//  min-height: 55px;
+//}
+
+//А вот черези нтерполяцию можно
+#{$mselector} {
+  box-sizing: content-box;
+  height: 100%;
+  min-height: 55px;
 }
