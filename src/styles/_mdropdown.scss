@@ -1,0 +1,13 @@
+@use '../../node_modules/bootstrap/scss/bootstrap' as bp;
+.dropdown-menu--mborder {
+  border: 2px solid #ec6c3b;
+}
+
+.dropdown-item--mst {
+  color: #0048ac;
+  text-decoration: underline;
+  white-space: normal;
+  @include bp.media-breakpoint-up(sm) {
+    white-space: nowrap;
+  }
+}

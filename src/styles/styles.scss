@@ -1,7 +1,4 @@
-@use '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
-@use 'base/vars';
-@use 'base/mixins';
-@use 'base/classes';
-@use 'bar/simple';
-@use 'bar/hard';
+@use '../../node_modules/bootstrap/scss/bootstrap';
+@use './body/body';
+@use './mdropdown';
 

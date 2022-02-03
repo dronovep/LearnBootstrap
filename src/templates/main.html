@@ -5,31 +5,150 @@
     <title>Моя страница</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../../dist/css/styles.css">
-<!--    <link rel="stylesheet" href="../../obj/css/bar/simple.css">-->
 </head>
 <body>
-<div class="vaka">
-    <div class="mhard"></div>
-</div>
-<!--    <div class="container">-->
-<!--        <div class="row">-->
-<!--            <div class="col-8 col-xs-12 bl">Колонка 1</div>-->
-<!--            <div class="col-2 col-xs-12 bl">Колонка 2</div>-->
-<!--            <div class="col-2 col-xs-12 bl">Колонка 3</div>-->
-<!--        </div>-->
-<!--        <div class="row">-->
-<!--            <div id="md" class="col">СТРОКА</div>-->
-<!--        </div>-->
-<!--        <div class="row">-->
-<!--            <div class="col-2 bl">Колонка 4</div>-->
-<!--            <div class="col-2 bl">Колонка 5</div>-->
-<!--            <div class="col-8 bl">Колонка 6</div>-->
-<!--        </div>-->
-<!--        <div class="row">-->
-<!--            <div class="col-4 bl">Колонка 7</div>-->
-<!--            <div class="col-4 bl">Колонка 8</div>-->
-<!--            <div class="col-4 bl">Колонка 9</div>-->
-<!--        </div>-->
-    </div>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-black p-2" aria-label="Third navbar example">
+        <div class="container-fluid">
+            <a class="navbar-brand d-sm-none" href="/">
+                <img src="../../assets/mob-logo.png" >
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample03" aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarsExample03">
+                <ul class="navbar-nav me-auto mb-2 mb-sm-0">
+                    <li class="nav-item">
+                        <a class="nav-link active text-white text-decoration-underline" aria-current="page" href="/">Главная</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white text-decoration-underline" href="#" id="dropdown03" data-bs-toggle="dropdown" aria-expanded="false">Услуги</a>
+                        <ul class="dropdown-menu dropdown-menu--mborder" aria-labelledby="dropdown03">
+                            <li><a class="dropdown-item dropdown-item--mst" href="/services/vds_kvm/">Виртуальные серверы VDS/VPS KVM</a></li>
+                            <li><a class="dropdown-item dropdown-item--mst" href="/service/kvm-nvme/">Виртуальные серверы VDS/VPS KVM NVMe</a></li>
+                            <li><a class="dropdown-item dropdown-item--mst" href="/services/vds_openvz/">Виртуальные серверы VDS/VPS OpenVZ</a></li>
+                            <li><a class="dropdown-item dropdown-item--mst" href="/services/vds-bitrix/">Конфигуратор VDS/VPS NVMe для 1С Bitrix</a></li>
+                            <li><a class="dropdown-item dropdown-item--mst" href="/services/vds_kvm_config/">Конфигуратор VDS/VPS KVM SSD</a></li>
+                            <li><a class="dropdown-item dropdown-item--mst" href="/services/rent/">Аренда выделенных серверов</a></li>
+                            <li><a class="dropdown-item dropdown-item--mst" href="/services/collocation/">Размещение серверов</a></li>
+                            <li><a class="dropdown-item dropdown-item--mst" href="/services/hosting_site/">Хостинг сайтов</a></li>
+                            <li><a class="dropdown-item dropdown-item--mst" href="/services/ssl_sertifikat/">SSL сертификаты</a></li>
+                            <li><a class="dropdown-item dropdown-item--mst" href="/services/vds-lisence/">Заказ лицензий 1С Bitrix</a></li>
+                            <li><a class="dropdown-item dropdown-item--mst" href="/services/admin_server/">Администрирование сервера</a></li>
+                            <li><a class="dropdown-item dropdown-item--mst" href="/services/microsoft/">Аренда лицензий Microsoft</a></li>
+                            <li><a class="dropdown-item dropdown-item--mst" href="/services/ispmanager">Панель управления ISPmanager</a></li>
+                            <li><a class="dropdown-item dropdown-item--mst" href="/services/domains/">Регистрация доменов</a></li>
+                            <li><a class="dropdown-item dropdown-item--mst" href="/services/ddos-guard/">Защита от DDos атак</a></li>
+                            <li><a class="dropdown-item dropdown-item--mst" href="/services/imunify/">Антивирус Imunify AV</a></li>
+                            <li><a class="dropdown-item dropdown-item--mst" href="/services/vlan/">Организация VLAN</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item d-sm-none d-md-inline">
+                        <a class="nav-link active text-white text-decoration-underline" href="/actions/">Акции</a>
+                    </li>
+                    <li class="nav-item d-sm-none d-md-inline">
+                        <a class="nav-link active text-white text-decoration-underline" href="/contacts/">Контакты</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white text-decoration-underline" href="#" id="dropdown04" data-bs-toggle="dropdown" aria-expanded="false">Компания</a>
+                        <ul class="dropdown-menu dropdown-menu--mborder" aria-labelledby="dropdown04">
+                            <li><a class="dropdown-item dropdown-item--mst" href="/company/">О нас</a></li>
+                            <li class="d-none d-sm-inline"><a class="dropdown-item dropdown-item--mst" href="/contacts/">Контакты</a></li>
+                            <li><a class="dropdown-item dropdown-item--mst" href="/company/dc/">Дата-центр</a></li>
+                            <li><a class="dropdown-item dropdown-item--mst" href="/company/news/year2022/">Новости и события</a></li>
+                            <li><a class="dropdown-item dropdown-item--mst" href="/company/job/">Вакансии</a></li>
+                            <li><a class="dropdown-item dropdown-item--mst" href="/company/licenses/">Свидетельства и лицензии</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item d-sm-none d-lg-inline">
+                        <a class="nav-link active text-white text-decoration-underline" href="/payment/">Оплата</a>
+                    </li>
+                    <li class="nav-item d-sm-none d-lg-inline">
+                        <a class="nav-link active text-white text-decoration-underline" href="http://wiki.planetahost.ru/?_ga=2.152342905.1772383376.1643902812-1160231178.1643136014">Поддержка</a>
+                    </li>
+                    <li class="nav-item dropdown d-none d-sm-inline d-lg-none">
+                        <a class="nav-link dropdown-toggle text-white text-decoration-underline" href="#" id="dropdown05" data-bs-toggle="dropdown" aria-expanded="false">Еще</a>
+                        <ul class="dropdown-menu dropdown-menu--mborder" aria-labelledby="dropdown05">
+                            <li class="d-md-none"><a class="dropdown-item dropdown-item--mst" href="/actions/">Акции</a></li>
+                            <li><a class="dropdown-item dropdown-item--mst" href="/payment/">Оплата</a></li>
+                            <li><a class="dropdown-item dropdown-item--mst" href="http://wiki.planetahost.ru/?_ga=2.152342905.1772383376.1643902812-1160231178.1643136014">Поддержка</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample03" aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="text-end">
+                    <a href="https://bill.planetahost.ru/?_ga=2.181878375.1772383376.1643902812-1160231178.1643136014" class="btn btn-sm btn-outline-light me-2" role="button">Вход</a>
+                    <a href="https://bill.planetahost.ru/?_ga=2.181878375.1772383376.1643902812-1160231178.1643136014" class="btn btn-sm btn-outline-light" role="button">Регистрация</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <nav class="navbar navbar-expand p-1 bg-light" aria-label="Second navbar example">
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse" id="navbarsExample02">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="btn btn-sm btn-outline-light" role="button" aria-current="page" href="/">
+                            <img class="d-inline-block" src="../../assets/rusflags.png">
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-sm btn-outline-light" role="button" href="/en/">
+                            <img class="d-inline-block" src="../../assets/britflags.png">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 </body>
+<script type="text/javascript" src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </html>
+
+<!--<a class="navbar-brand" href="#">Always expand</a>-->
+<!--<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation">-->
+<!--    <span class="navbar-toggler-icon"></span>-->
+<!--</button>-->
+
+<!--<a href="/"><img src="/externimg/mob-logo.png" class="moblogo"></a>-->
+<!--<div class="text-end">-->
+<!--    <a href="https://bill.planetahost.ru/?_ga=2.181878375.1772383376.1643902812-1160231178.1643136014" class="btn btn-sm btn-outline-light me-2" role="button">Вход</a>-->
+<!--    <a href="https://bill.planetahost.ru/?_ga=2.181878375.1772383376.1643902812-1160231178.1643136014" class="btn btn-sm btn-outline-light" role="button">Регистрация</a>-->
+<!--</div>-->
+
+<!--<nav class="navbar navbar-expand-sm navbar-dark bg-dark" aria-label="Third navbar example">-->
+<!--    <div class="container-fluid">-->
+
+<!--        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample03" aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">-->
+<!--            <span class="navbar-toggler-icon"></span>-->
+<!--        </button>-->
+
+<!--        <div class="collapse navbar-collapse" id="navbarsExample03">-->
+<!--            <ul class="navbar-nav me-auto mb-2 mb-sm-0">-->
+<!--                <li class="nav-item">-->
+<!--                    <a class="nav-link active" aria-current="page" href="#">Home</a>-->
+<!--                </li>-->
+<!--                <li class="nav-item">-->
+<!--                    <a class="nav-link" href="#">Link</a>-->
+<!--                </li>-->
+<!--                <li class="nav-item">-->
+<!--                    <a class="nav-link disabled">Disabled</a>-->
+<!--                </li>-->
+<!--                <li class="nav-item dropdown">-->
+<!--                    <a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</a>-->
+<!--                    <ul class="dropdown-menu" aria-labelledby="dropdown03">-->
+<!--                        <li><a class="dropdown-item" href="#">Action</a></li>-->
+<!--                        <li><a class="dropdown-item" href="#">Another action</a></li>-->
+<!--                        <li><a class="dropdown-item" href="#">Something else here</a></li>-->
+<!--                    </ul>-->
+<!--                </li>-->
+<!--            </ul>-->
+<!--            <form>-->
+<!--                <input class="form-control" type="text" placeholder="Search" aria-label="Search">-->
+<!--            </form>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</nav>-->
